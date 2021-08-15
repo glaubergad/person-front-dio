@@ -1,4 +1,8 @@
 # PersonFrontDio
+Projeto simples de front-end para a API projeto PersonApi.
+
+Finalidade de treinar funcionalidade de SPA usando Angular e comunicando com API REST
+
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.9.
 
