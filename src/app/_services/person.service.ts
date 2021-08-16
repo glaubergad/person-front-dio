@@ -1,7 +1,6 @@
 import {Injectable} from '@angular/core';
-import {CommonService} from './common/common.service';
+import {CommonService} from './_common/common.service';
 import {HttpClient} from '@angular/common/http';
-import {Observable} from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -12,23 +11,23 @@ export class PersonService extends CommonService {
     super(http);
   }
 
-  postPerson(body): Observable<any> {
+  postPerson(body): Promise<any> {
     return super.post(`/people`, body);
   }
 
-  getPersonList(): Observable<any> {
+  getPersonList(): Promise<any> {
     return super.get(`/people`);
   }
 
-  getPersonById(id): Observable<any> {
+  getPersonById(id): Promise<any> {
     return super.get(`/people/${id}`);
   }
 
-  putPerson(person): Observable<any> {
+  putPerson(person): Promise<any> {
     return super.put(`/people`, person);
   }
 
-  deletePerson(id): Observable<any> {
+  deletePerson(id): Promise<any> {
     return super.delete(`/people/${id}`);
   }
 

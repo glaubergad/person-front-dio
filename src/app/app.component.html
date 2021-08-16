@@ -1,8 +1,13 @@
 <div class="header">
-  <h1>Hello World!</h1>
-  <h3>Seja Bem Vindo ao Front-end da PersonAPI</h3>
+  <h3>Seja Bem Vindo ao {{title}}</h3>
 </div>
-<router-outlet></router-outlet>
+<div>
+  <button mat-button (click)="lista()">Lista</button>
+  <button mat-button (click)="novaPessoa()">Nova Pessoa</button>
+</div>
+<div>
+  <router-outlet></router-outlet>
+</div>
 <div class="footer">
-Glauber Gadelha  - 2021
+  Glauber Gadelha - 2021
 </div>

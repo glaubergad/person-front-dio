@@ -1,0 +1,53 @@
+<h2>Incluir nova Pessoa</h2>
+
+
+<form [formGroup]="formPerson">
+<p>
+  <mat-form-field appearance="fill">
+    <mat-label>First Name</mat-label>
+    <input matInput formControlName="firstName">
+  </mat-form-field>
+</p>
+
+  <p>
+  <mat-form-field appearance="fill">
+    <mat-label>Last Name</mat-label>
+    <input matInput formControlName="lastName">
+  </mat-form-field>
+  </p>
+
+  <p>
+  <mat-form-field appearance="fill">
+    <mat-label>CPF</mat-label>
+    <input matInput formControlName="cpf">
+  </mat-form-field>
+  </p>
+
+  <p>
+  <mat-form-field appearance="fill">
+    <mat-label>Nascimento</mat-label>
+    <input matInput formControlName="birthDate">
+  </mat-form-field>
+  </p>
+
+  <p>
+  <mat-form-field appearance="fill">
+    <mat-label>Tipo de Telefone</mat-label>
+    <mat-select formControlName="phoneType">
+      <mat-option value="MOBILE">Celular</mat-option>
+      <mat-option value="COMMERCIAL">Comercial</mat-option>
+      <mat-option value="HOME">Casa</mat-option>
+    </mat-select>
+  </mat-form-field>
+  </p>
+
+  <p>
+    <mat-form-field appearance="fill">
+      <mat-label>Numero</mat-label>
+      <input matInput formControlName="number">
+    </mat-form-field>
+  </p>
+
+  <button mat-button (click)="postPerson()">Salvar</button>
+
+</form>
