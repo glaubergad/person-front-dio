@@ -10,7 +10,7 @@ import {environment} from '../environments/environment';
 
 export class AppComponent implements OnInit {
 ambiente = environment.production;
-title = 'Belém Vacinada';
+title = 'Person Front-end';
 
 constructor(
   public router: Router,

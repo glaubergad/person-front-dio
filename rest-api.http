@@ -1,0 +1,76 @@
+POST https://glaubergad-peopleapi.herokuapp.com/api/v1/people
+Content-Type: application/json
+
+{
+  "firstName": "Joao",
+  "lastName": "Batista",
+  "cpf": "72519630000",
+  "birthDate": "15-12-1976",
+  "phones": [
+    {
+      "type": "MOBILE",
+      "number": "(91)98083-4019"
+    },
+    {
+      "type": "COMMERCIAL",
+      "number": "(91)3231-4019"
+    }
+  ]
+}
+
+###
+
+POST https://glaubergad-peopleapi.herokuapp.com/api/v1/people
+Content-Type: application/json
+
+{
+  "firstName": "Joana",
+  "lastName": "Santana",
+  "cpf": "41522948090",
+  "birthDate": "15-12-1976",
+  "phones": [
+    {
+      "type": "MOBILE",
+      "number": "(91)98083-4020"
+    },
+    {
+      "type": "COMMERCIAL",
+      "number": "(91)3231-4020"
+    }
+  ]
+}
+
+<> 2021-08-16T181408.201.json
+
+###
+
+POST https://glaubergad-peopleapi.herokuapp.com/api/v1/people
+Content-Type: application/json
+
+{
+  "firstName": "Maria",
+  "lastName": "Joana",
+  "cpf": "61026208017",
+  "birthDate": "15-12-1976",
+  "phones": [
+    {
+      "type": "MOBILE",
+      "number": "(91)98083-4021"
+    },
+    {
+      "type": "COMMERCIAL",
+      "number": "(91)3231-4021"
+    }
+  ]
+}
+
+
+
+
+###
+GET https://glaubergad-peopleapi.herokuapp.com/api/v1/people
+Accept: application/json
+
+<> 2021-08-16T181228.200.json
+
+###

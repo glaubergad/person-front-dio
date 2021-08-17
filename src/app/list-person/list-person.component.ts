@@ -3,6 +3,7 @@ import {PersonService} from '../_services/person.service';
 import {Router} from '@angular/router';
 import {Person} from '../_model/person';
 import {Phone} from '../_model/phone';
+import {Observable, Subscription} from 'rxjs';
 
 @Component({
   selector: 'app-list-person',
@@ -12,8 +13,9 @@ import {Phone} from '../_model/phone';
 export class ListPersonComponent implements OnInit {
   person = new Person();
   phone = new Phone();
+  observerListPerson: Subscription = null;
   listPersons = [];
-  displayedColumns = ['Id', 'firstName', 'lastName', 'CPF', 'birthDate'];
+  displayedColumns = ['Id', 'firstName', 'lastName', 'CPF', 'birthDate', 'phone1'];
 
   constructor(
     public personService: PersonService,
@@ -26,15 +28,14 @@ export class ListPersonComponent implements OnInit {
   }
 
   getListPerson(): any {
-    this.personService.getPersonList().then(response => {
-      console.log('Resposta', response);
+    this.observerListPerson = this.personService.getPersonList().subscribe(response => {
       this.listPersons = response;
-      /*for (const person of response){
-        this.listPersons.push(person);
-      }*/
-    }).catch(error => {
-      console.log('Erro ao obter lista', error);
     });
+    setTimeout(() =>
+    {
+      this.observerListPerson.unsubscribe();
+      console.log('status', this.observerListPerson);
+      } , 30000);
   }
 
 }

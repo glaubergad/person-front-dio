@@ -1,6 +1,7 @@
 import {Injectable} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {environment} from '../../../environments/environment';
+import {Observable} from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -10,8 +11,8 @@ export class CommonService {
   constructor(public http: HttpClient) {
   }
 
-  public get(uri: string, options?): Promise<any> {
-    return this.http.get(`${environment.apiurl}${uri}`, options).toPromise();
+  public get(uri: string, options?): Observable<any> {
+    return this.http.get(`${environment.apiurl}${uri}`, options);
   }
 
   public post(uri: string, body: any, options?): Promise<any> {
